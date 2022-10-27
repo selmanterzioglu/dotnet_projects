@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Template {
-    internal  class Template {
+namespace Program {
+    internal  class Program {
         static void Main(String[] args)
         {
                 
