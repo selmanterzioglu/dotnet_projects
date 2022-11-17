@@ -2,3 +2,4 @@
 bin/
 dotnet_projects.csproj
 obj/
+.vs
