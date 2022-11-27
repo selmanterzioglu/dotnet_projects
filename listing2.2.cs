@@ -2,15 +2,15 @@
 using System.Threading.Tasks;
 
 
-namespace Listing_02
+namespace listing2_2
 {
-    public class Program
+    public class listing2_2
     {
         static void print_message()
         {
             Console.WriteLine("hello world");
         }
-        static void Main(string[] args)
+        static void main(string[] args)
         {
             Task task1 = new Task(new Action(print_message));
             Task task2 = new Task(delegate {
@@ -27,7 +27,6 @@ namespace Listing_02
             task4.Start();
             Console.WriteLine("main method complete!");
             Console.ReadLine();    
-
         }
     }
 }

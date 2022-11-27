@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace Listing_03
+namespace listing2_3
 {
-    class Program
+    class listing2_3
     {
         static void print_message(object message)
         {
             Console.WriteLine("message: {0}", message);
         }
 
-        static void Main(string[] args)
+        static void main(string[] args)
         {
             Task task1 = new Task(new Action<object>(print_message),
                 "first task");

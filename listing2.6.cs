@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace Listing_05
+namespace listing2_6
 {
-    class Program
+    class listing2_6
     {
-        static void Main(string[] args)
+        static void main(string[] args)
         {
             Task<int> task1 = new Task<int>(() =>
             {
