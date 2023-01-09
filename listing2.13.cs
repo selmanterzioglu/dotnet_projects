@@ -2,11 +2,11 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Program
+namespace listing2_13   
 {
-    class Program
+    class listing2_13
     {
-        static void Main(string[] args)
+        static void main(string[] args)
         {
            
             // create the cancellation token source
@@ -22,10 +22,16 @@ namespace Program
                 for (int i = 0; i < Int32.MaxValue; i++)
                 {
                     // put the task to sleep for 10 seconds 
-                    Thread.Sleep (10000);    
+                    bool cancelled = token.WaitHandle.WaitOne(10000);
                     // print out a message 
-                    Console.WriteLine("task 1 - Int Value {0}",i);
-                    token.ThrowIfCancellationRequested();
+                    Console.WriteLine("task 1 - Int Value {0}, Cancelled? {1}",
+                        i, cancelled);
+
+                    //  check to see if we have been cancelled
+                    if (cancelled)
+                    {
+                        throw new OperationCanceledException(token);
+                    }
                 }
             }, token);
 

@@ -2,11 +2,11 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Program
+namespace listing2_14
 {
-    class Program
+    class listing2_14
     {
-        static void Main(string[] args)
+        static void main(string[] args)
         {
            
             // create the cancellation token source
